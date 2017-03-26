@@ -1,6 +1,6 @@
 function OmegaVal=LMI_Aut16_th2(A,B,C,K,L,h,r1,muM,alpha,sigma)
 % This MATLAB program checks the feasibility of LMIs from Theorem 2 of the paper 
-% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, 2016. 
+% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, vol. 74, pp. 63–70, 2016.
 
 % The program uses YALMIP parser (http://users.isy.liu.se/johanl/yalmip/)
 % and SeDuMi solver (http://sedumi.ie.lehigh.edu/)
@@ -94,8 +94,8 @@ OmegaVal=[];
 if sol.problem == 0
     [primal,~]=check(LMIs); 
     if (min(primal)>=0 && all(primal(1:2)>0)) 
-        OmegaVal=double(Omega); 
+        OmegaVal=value(Omega); 
     end
 else
-    yalmiperror(sol.problem); 
+    yalmiperror(sol.problem) 
 end
