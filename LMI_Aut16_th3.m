@@ -1,6 +1,6 @@
 function flag=LMI_Aut16_th3(A,B,C,K,L,h,r0,etaM,alpha)
 % This MATLAB program checks the feasibility of LMIs from Theorem 3 of the paper 
-% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, 2016. 
+% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, vol. 74, pp. 63–70, 2016.
 
 % The program uses YALMIP parser (http://users.isy.liu.se/johanl/yalmip/)
 % and SeDuMi solver (http://sedumi.ie.lehigh.edu/)
@@ -67,5 +67,5 @@ if sol.problem==0
     [primal,~]=check(LMIs); 
     flag=(min(primal)>=0 && all(primal(1:3)>0)); 
 else
-    yalmiperror(sol.problem); 
+    yalmiperror(sol.problem) 
 end
