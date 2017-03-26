@@ -1,5 +1,5 @@
 % This MATLAB program checks the feasibility of LMIs from Theorems 1-3 of the paper 
-% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, 2016. 
+% A. Selivanov and E. Fridman, "Observer-based input-to-state stabilization of networked control systems with large uncertain delays," Automatica, vol. 74, pp. 63–70, 2016
 % for the inverted pendulum on a cart given in Section 5. 
 
 %% System parameters
